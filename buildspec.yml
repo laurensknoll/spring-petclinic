@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+  build:
+    commands:
+       - mvn package
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
+
+artifacts:
+  files:
+     - '**/*'
