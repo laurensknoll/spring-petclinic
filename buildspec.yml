@@ -8,10 +8,11 @@ phases:
     commands:
        - mvn package
 
+artifacts:
+  files:
+     - 'target/*.jar'
+   name: petclinic-$(CODEBUILD_SOURCE_VERSION)
+
 cache:
   paths:
     - '/root/.m2/**/*'
-
-artifacts:
-  files:
-     - '**/*'
